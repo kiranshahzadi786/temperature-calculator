@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.heading1{
+    margin: 100px auto;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            background-color: aqua;
+            width: 700px;
+            height: 700
+}
+.heading2{
+    color: blue;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="heading1">
+    <h1 class="heading2" >Temperature checking app</h1>
+    <form onsubmit="conditioncheck() ; return false">
+<label for="temp"><b>TEMPERATURE:</b></label>
+<input type="number" id="temp">
+<br>
+<input type="submit" value="check">
+
+    </form>
+    <p id="result"></p>
+    <script>
+function conditioncheck () {
+let temp = +document.querySelector("#temp").value;
+
+if( temp > 30){
+    document.querySelector( "#result").innerHTML = "<b>Its too hot outside</b>";
+    
+}
+ else if( temp > 25){
+    document.querySelector( "#result").innerHTML ="<b>Its pleasent outside</b>";
+    
+}
+else if( temp > 20){
+    document.querySelector( "#result").innerHTML ="<b>You need a jacket</b>";
+    
+}
+ else if( temp > 10){
+    document.querySelector( "#result").innerHTML ="<b>Probably you  need double  jacket</b>";
+    
+}
+ else {
+    document.querySelector( "#result").innerHTML ="<b>Its freezing outside</b>";
+    
+}
+
+
+}
+
+
+
+
+
+    </script>
+
+
+
+</div>
